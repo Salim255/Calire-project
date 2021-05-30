@@ -1,0 +1,57 @@
+.header {
+  height: 95vh; //95%
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-gray-dark, 0.8),
+      rgba($color-tertiary-dark, 0.8)
+    ),
+    url('../../assets/eiffel-4.jpg');
+  background-size: cover;
+  background-position: top; //to be sure the top off the ba image will always show-off
+  position: relative;
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); //to make it work on all the browsers
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh,  0 100%);
+  &__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+  &__logo {
+    height: 4rem;
+    width: 6rem;
+  }
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  &-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+  }
+
+  &-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.05rem;
+  }
+}
+
+.text-box{
+ //to center the text box 
+ position: absolute;
+ top: 30%;
+ left:20%;
+
+ transform:translate(-7%, 0) ;//its relate to the elemnt it self
+}
