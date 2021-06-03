@@ -1,0 +1,29 @@
+.section-about {
+  background-color: $color-gray-light;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-gray-dark, 0.8),
+      rgba($color-tertiary-dark-2, 0.8)
+    ),
+    url('../../assets/libary.jpg');
+    background-size: contain;
+    transform: skewY(-7deg);
+    margin-top: -11vh;
+
+    &>*{//every thingthat direct child to the main selector in our cas is the row
+       transform: skewY(7deg);
+    }
+    
+}
+
+.section-cours{
+ background-color: $color-gray-light;
+ padding: 25rem 0 15rem 0;
+ margin-top: -11vh;
+
+}

@@ -1,3 +1,16 @@
 @import 'styles/abstracts/variables';
-@import 'styles/base';
+@import 'styles/abstracts/animations';
+@import 'styles/abstracts/mixins';
+@import 'styles/abstracts/utilities';
+
+@import 'styles/components/buttons';
+@import 'styles/components/compostion';
+@import 'styles/components/feature';
+@import 'styles/components/card';
+
+@import 'styles/bases/typhograpies';
+@import 'styles/bases/base';
+
+@import 'styles/pages/home';
 @import 'styles/layout/header';
+@import 'styles/layout/grid';

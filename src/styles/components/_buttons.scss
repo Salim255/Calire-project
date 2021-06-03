@@ -1,0 +1,97 @@
+.btn:link,
+:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block; //we wil always do this to have some pading or width ...
+  transition: all 0.2s;
+  //border-radius: 100rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%; //of the btn original size
+    width: 100%;
+    position: absolute; //we will use absolut posinot to put it behinde the actuel button
+    //but the obsolute need always a refernce, so we use a reletive position in parent button
+    top: 0;
+    left: 0;
+    z-index: -1; //z-index define the postion of the elements if the one on top of the an other, with this we put the opsudo elemnt behinde the actuel buttons..
+    // border-radius: 10rem;
+
+    //this is the inital state so lets use the animations..
+    transition: all 0.4s;
+  }
+  &:hover::after {
+    //when do I wnat to see the ::after effect?  its when we hover
+    transform: scaleX(1.5) scaleY(1.4);
+    opacity: 0; //to make it fade up, so we dont see when it go back
+  }
+}
+
+.btn--white {
+  background-color: $color-white;
+  color: #777;
+
+  &::after {
+    //when do I wnat to see the ::after effect?  its when we hover
+    background-color: $color-white;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-gray-dark, $alpha: 0.8);
+  }
+  &:active {
+    transform: translateY(
+      -0.01rem
+    ); //in relation to the intial state(before hover)
+  }
+}
+
+.btn--blue {
+  background-image: linear-gradient(
+    
+    $color-tertiary-dark-1,
+    $color-tertiary-dark-2
+  );
+  color: white;
+
+  &::after {
+    //when do I wnat to see the ::after effect?  its when we hover
+    background-color: $color-gray-dark;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-gray-dark, $alpha: 0.8);
+  }
+  &:active {
+    transform: translateY(
+      -0.01rem
+    ); //in relation to the intial state(before hover)
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-tertiary-dark-1;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-tertiary-dark-1;
+    padding: 3px;
+
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $color-tertiary-dark-2;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
+    transform: translateY(-0.2rem);
+  }
+  &:active {
+    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
+    transform: translateY(0);
+  }
+}

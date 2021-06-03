@@ -1,0 +1,8 @@
+.compostion {
+  &__photo {
+    width: 100%;
+    height: 30rem;
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.4);
+    border-radius: 0.2rem;
+  }
+}

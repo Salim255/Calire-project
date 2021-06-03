@@ -3,16 +3,19 @@ import React from 'react'
 const Header = () => {
   return (
     <header className='header'>
-      <div className='header__logo-box'>
-        <img src='/assets/img.ico' alt='header-logo' className='header__logo' />
-      </div>
+      <div className='header__logo-box'>claire del olmo</div>
       <div className='text-box'>
         <h1 className='heading-primary'>
-          <span className='heading-primary-main'>cinéma et Fle</span>
+          <span className='heading-primary-main'>
+            Français langue étrangère{' '}
+          </span>
           <span className='heading-primary-sub'>
-            stages en ligne pour enseignants
+            formations pour formateurs - création pédagogique - cours de langue
           </span>
         </h1>
+        <a href='#' className='btn btn--white btn-animated'>
+          découvrir plus
+        </a>
       </div>
     </header>
   )

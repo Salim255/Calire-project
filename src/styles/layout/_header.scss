@@ -2,8 +2,8 @@
   height: 95vh; //95%
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-gray-dark, 0.8),
-      rgba($color-tertiary-dark, 0.8)
+       rgba($color-gray-dark, 0.8),
+      rgba($color-tertiary-dark-2, 0.8)
     ),
     url('../../assets/eiffel-4.jpg');
   background-size: cover;
@@ -16,7 +16,7 @@
     0 100%
   ); //to make it work on all the browsers
 
-  clip-path: polygon(0 0, 100% 0, 100% 75vh,  0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   &__logo-box {
     position: absolute;
     top: 2rem;
@@ -25,33 +25,24 @@
   &__logo {
     height: 4rem;
     width: 6rem;
+
+    &:hover {
+      animation-name: moveupIcon;
+      animation-duration: 2s;
+    }
   }
 }
 
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-
-  &-main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 2rem;
-  }
-
-  &-sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.05rem;
-  }
+.text-box {
+  //to center the text box
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-7%, 0); //its relate to the elemnt it self
+  text-align: center;
 }
 
-.text-box{
- //to center the text box 
- position: absolute;
- top: 30%;
- left:20%;
-
- transform:translate(-7%, 0) ;//its relate to the elemnt it self
+.btn-animated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; //this will stop the style of 0% before the animation stat
 }

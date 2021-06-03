@@ -1,0 +1,28 @@
+.feature-box {
+  background-color: rgba($color-white, $alpha: 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 1);
+  transition: transform 0.3s;
+ 
+
+  &__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-gray-dark,
+      $color-tertiary-dark-1
+    );
+    display: inline-block;
+    -webkit-background-clip: text; //to showthe color exactly where the txt is
+    color: transparent; //the color of the text is transpaent to make us see the -webki-clip
+  }
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+  &__text {
+  }
+}

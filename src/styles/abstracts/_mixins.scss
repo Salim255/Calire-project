@@ -1,0 +1,8 @@
+@mixin clearfix {
+  //in order to remove the flew that happen when we rendering the page, so we need it to clear the flew frm top around the elemnt
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
