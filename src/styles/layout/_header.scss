@@ -2,7 +2,7 @@
   height: 95vh; //95%
   background-image: linear-gradient(
       to right bottom,
-       rgba($color-gray-dark, 0.8),
+      rgba($color-gray-dark, 0.8),
       rgba($color-tertiary-dark-2, 0.8)
     ),
     url('../../assets/eiffel-4.jpg');
@@ -21,6 +21,18 @@
     position: absolute;
     top: 2rem;
     left: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
+    background-image: linear-gradient(
+      to bottom,
+      #88c7dc,
+      $color-white
+    );
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Great Vibes', cursive;
   }
   &__logo {
     height: 4rem;
@@ -36,8 +48,8 @@
 .text-box {
   //to center the text box
   position: absolute;
-  top: 30%;
-  left: 20%;
+  top: 20%;
+  left: 15%;
   transform: translate(-7%, 0); //its relate to the elemnt it self
   text-align: center;
 }

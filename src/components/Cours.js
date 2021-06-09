@@ -76,7 +76,7 @@ const Cours = () => {
                 <div className='card__picture card__picture--3'></div>
                 <h4 className='card__heading'>
                   <span className='card__heading-span card__heading-span--3'>
-                    prepara au DELF-DALF
+                    preparation delf-dalf
                   </span>
                 </h4>
                 <div className='card__details'>

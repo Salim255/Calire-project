@@ -18,6 +18,7 @@
     );
     display: inline-block;
     -webkit-background-clip: text; //to showthe color exactly where the txt is
+     background-clip: text;
     color: transparent; //the color of the text is transpaent to make us see the -webki-clip
   }
   &:hover {
