@@ -19,9 +19,9 @@ const Features = () => {
         </div>
         <div className='col-1-of-4'>
           <div className='feature-box '>
-            <i className='feature-box__icon fas fa-book'></i>
+            <i className='feature-box__icon fas fa-book-reader'></i>
             <h3 className='heading-tertiary margin-bottom-small '>
-              formateurs de migrants
+              formateurs migrants
             </h3>
             <p className='feature-box__text'>
               Se former aux spécifités des publics, aux approches
@@ -47,7 +47,7 @@ const Features = () => {
             <i className='feature-box__icon fas fa-book'></i>
 
             <h3 className='heading-tertiary margin-bottom-small '>
-              Cours de français
+              Cours français
             </h3>
             <p className='feature-box__text'>
               Se préparer au DELF, se former au français général, sur objectifs

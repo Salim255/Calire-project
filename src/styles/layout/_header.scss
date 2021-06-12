@@ -23,11 +23,7 @@
     left: 2rem;
     font-size: 4rem;
     font-weight: 700;
-    background-image: linear-gradient(
-      to bottom,
-      #88c7dc,
-      $color-white
-    );
+    background-image: linear-gradient(to right bottom, #faf0dc, #d4af37);
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
@@ -58,3 +54,5 @@
   animation: moveInButton 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; //this will stop the style of 0% before the animation stat
 }
+
+

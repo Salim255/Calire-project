@@ -6,9 +6,9 @@
 
   &-main {
     display: block;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 400;
-    letter-spacing: 2rem;
+    letter-spacing: 1.5rem;
     animation-name: moveInleft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -19,7 +19,7 @@
   &-sub {
     display: block;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 1.05rem;
     animation: moveInright 1s ease-out;
   }
@@ -28,7 +28,7 @@
 .heading--secendary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   background-image: linear-gradient(
     to right bottom,
     $color-gray-dark,
@@ -68,7 +68,7 @@ body {
   }
 }
 
-.header__logo-box{
+.header__logo-box {
   color: #000000;
   font-size: 700;
   font-weight: 400;
