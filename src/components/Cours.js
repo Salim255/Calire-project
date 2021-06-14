@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const Cours = () => {
   return (
-    <section className='section-cours'>
+    <section className='section-cours' id='section-cours'>
       <div className='center-text margin-bottom-big'>
         <h2 className='heading--secendary'>nos formations en ligne</h2>
       </div>
@@ -33,7 +33,7 @@ const Cours = () => {
                     <p className='card__price-only'>seulement</p>
                     <p className='card__price-value'>$297</p>
                   </div>
-                  <a href='#' className='btn btn--white'>
+                  <a href='#popup' className='btn btn--white'>
                     acheter
                   </a>
                 </div>
@@ -63,7 +63,7 @@ const Cours = () => {
                     <p className='card__price-only'>seulement</p>
                     <p className='card__price-value'>$297</p>
                   </div>
-                  <a href='#' className='btn btn--white'>
+                  <a href='#popup' className='btn btn--white'>
                     acheter
                   </a>
                 </div>
@@ -93,7 +93,7 @@ const Cours = () => {
                     <p className='card__price-only'>seulement</p>
                     <p className='card__price-value'>$297</p>
                   </div>
-                  <a href='#' className='btn btn--white'>
+                  <a href='#popup' className='btn btn--white'>
                     acheter
                   </a>
                 </div>

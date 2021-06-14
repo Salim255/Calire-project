@@ -1,0 +1,117 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    @include absCenter;
+    width: 75%;
+    background-color: white;
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5); //we cant have more than one transorm in the same element block, but we can put them together
+    transition: all 0.5s .3s;
+  }
+
+  &__left {
+    width: 33.33333%;
+    display: table-cell;
+  }
+  &__right {
+    width: 66.6666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 20rem;
+  }
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid $color-gray-light-2;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-gray-light-2;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  &:target &__content {
+    //animation on the popup chiled(the content)
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-gray-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+
+      transition: all 0.3s;
+      line-height: 1;
+      &:hover {
+        color: $color-tertiary-dark;
+      }
+    }
+  }
+}
+
+// .popup {
+//   position: fixed;
+//   width: 70%;
+//   height: 72%;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   background-color: white;
+//   border-radius: 3px;
+//   box-shadow: 0 1rem 3rem rgba($color: #000000, $alpha: 1);
+//   opacity: 0.95;
+//   overflow: hidden;
+//   z-index: 2000;
+//   &__content {
+//     text-align: center;
+//   }
+//   &__content-1 {
+//     .image {
+//       width: 100%;
+//       height: 20rem;
+//       background-size: cover;
+//     }
+//   }
+//   &__content-2 {
+//     position: absolute;
+//     top: 50%;
+//     left: 60%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
