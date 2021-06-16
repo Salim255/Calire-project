@@ -14,6 +14,11 @@
     box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 1);
     text-align: center; //to center the icons
     cursor: pointer;
+
+    @include respond(phone){
+      top:3rem;
+      right:3rem ;
+    }
   }
   &__background {
     height: 4rem;
@@ -29,6 +34,7 @@
     z-index: 1000;
     //transform: scaleY(20);
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    
   }
   &__nav {
     height: 100%;
@@ -45,11 +51,12 @@
   &__list {
     position: absolute;
     top: 37%;
-    left: 82%;
+    left: 80%;
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
-    width: 100%;
+
+    width: 30%;
   }
   &__item {
     margin: 1rem;
@@ -58,12 +65,13 @@
     &:link,
     &:visited {
       display: inline-block;
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: 300;
       padding: 1rem 2rem;
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
+
       background-image: linear-gradient(
         -60deg,
         $color-white 50%,

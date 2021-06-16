@@ -7,9 +7,33 @@
 }
 html {
   //this define what 1rem is
-  font-size: 62.5%;
+  font-size: 62.5%; //1 rem = 10px/16px=62.5%
+  /*
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+
+  @include respond(tab-land) {
+    //width <1200px we define 1rem == 9px=> 9/16*100 = 56.25%
+    font-size: 56.25%; //
+  }
+  @include respond(tab-port) {
+    //width <900px we define 1rem == 8px=> 8/16*100 = 50%
+    font-size: 50%; //
+  }
+  @include respond(big-desktop) {
+    //width >1200px <1800px we define 1rem == 12px=> 12/16*100 = 75%
+    font-size: 75%; //
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port){
+    padding: 0;
+  }
+
 }

@@ -4,15 +4,24 @@
 }
 
 .margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 .margin-bottom-small {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.9rem !important;
 }
 .margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
-.margin-top-big{
-  margin-top: 8rem;
+.margin-top-big {
+  margin-top: 8rem !important;
+   @include respond(tab-port) {
+    margin-top: 5rem !important;
+  }
 }

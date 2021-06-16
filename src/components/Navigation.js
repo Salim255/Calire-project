@@ -17,27 +17,27 @@ const Navigation = () => {
         <ul className='navigation__list'>
           <li className='navigation__item'>
             <a href='#' className='navigation__link'>
-              about
+              formateurs fle
             </a>
           </li>
           <li className='navigation__item'>
             <a href='#' className='navigation__link'>
-              about
+              formateurs migrants
             </a>
           </li>
           <li className='navigation__item'>
             <a href='#' className='navigation__link'>
-              about
+              creation pedagogique
             </a>
           </li>
           <li className='navigation__item'>
             <a href='#' className='navigation__link'>
-              about
+              cours francais
             </a>
           </li>
           <li className='navigation__item'>
             <a href='#' className='navigation__link'>
-              about
+              qui sommes nous
             </a>
           </li>
         </ul>

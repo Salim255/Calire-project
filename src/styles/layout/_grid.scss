@@ -8,12 +8,26 @@
 
   &:not(:last-child) {
     margin-bottom: $qutter-vertical;
+    @include respond(tab-port) {
+      margin-bottom: $qutter-vertical-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
   }
   @include clearfix;
   [class^='col-'] {
     float: left;
     &:not(:last-child) {
       margin-right: $qutter-horizontal;
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $qutter-vertical-small;
+      }
+    }
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {

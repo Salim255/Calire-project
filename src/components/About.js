@@ -5,14 +5,14 @@ const About = () => {
     <section className='section-about'>
       <div className='center-text margin-bottom-big'>
         <h2 className='heading--secendary'>
-          Formateurs ou apprenants de français : bienvenue sur notre site !
+          Formateurs ou apprenants de français
         </h2>
       </div>
 
       <div className='row'>
         <div className='about'>
           <h3 className='heading-tertiary margin-bottom-small'>apprenants</h3>
-          <p >
+          <p>
             Pour ceux qui veulent apprendre le français, développer leurs
             compétences à l'oral et à l'écrit ou encore se préparer aux examens
             de types DELF, voici des cours particuliers ou en petits groupes
@@ -23,7 +23,7 @@ const About = () => {
             apprentissage soit le plus efficace possible.
           </p>
           <h3 className='heading-tertiary margin-bottom-small'>formateurs</h3>
-          <p >
+          <p>
             Pour les formateurs qui enseignent le FLE, en France ou à
             l'étranger, vous trouverez ici des formations où sont partagés
             savoirs théoriques et pratiques. Que vous soyez un enseignant
@@ -52,7 +52,6 @@ const About = () => {
             savoir plus &rarr;
           </a>
         </div>
-
       </div>
     </section>
   )

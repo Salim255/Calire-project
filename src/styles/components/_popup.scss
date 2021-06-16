@@ -24,7 +24,7 @@
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5); //we cant have more than one transorm in the same element block, but we can put them together
-    transition: all 0.5s .3s;
+    transition: all 0.5s 0.3s;
   }
 
   &__left {
@@ -62,7 +62,7 @@
   &:target &__content {
     //animation on the popup chiled(the content)
     opacity: 1;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &__close {

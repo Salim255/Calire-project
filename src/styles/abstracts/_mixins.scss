@@ -7,9 +7,53 @@
   }
 }
 
-@mixin  absCenter {
+@mixin absCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+//Mdia uery Manger
+/*
+0- 600px: phone
+600-900px: Tablet portrait
+[1200-1800] is where our normal styles apply
+1800px+ : Bg desktop
+*/
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+/*
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5rem) {//we had set at the beggining 1rem ==16px now we want to change px to rem so >600/16 = 37.5rem 
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25rem) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75rem) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5rem) {
+      @content;
+    }
+  }
 }

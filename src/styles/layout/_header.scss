@@ -17,13 +17,22 @@
   ); //to make it work on all the browsers
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
   &__logo-box {
     position: absolute;
     top: 2rem;
     left: 2rem;
     font-size: 4rem;
     font-weight: 700;
-    background-image: linear-gradient(to right bottom, #faf0dc, #d4af37);
+    background-image: linear-gradient(
+      to right bottom,
+      $color-gold-light,
+      $color-gold
+    );
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
@@ -54,5 +63,3 @@
   animation: moveInButton 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; //this will stop the style of 0% before the animation stat
 }
-
-
