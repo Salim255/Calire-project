@@ -32,8 +32,11 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem;
-  @include respond(tab-port){
+  @include respond(tab-port) {
     padding: 0;
   }
-
+}
+::selection {
+  background-color: $color-tertiary-dark-1;
+  color: $color-white;
 }

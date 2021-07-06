@@ -42,17 +42,17 @@
   }
 
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25rem) {
+    @media only screen and (max-width: 56.25rem) {
       @content;
     }
   }
   @if $breakpoint == tab-land {
-    @media (max-width: 75rem) {
+    @media only screen and (max-width: 75rem) {
       @content;
     }
   }
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5rem) {
+    @media only screen and (min-width: 112.5rem) {
       @content;
     }
   }

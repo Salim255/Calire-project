@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css'
 const Features = () => {
   return (
     <section className='section-features'>
-      <div className='row feature__row'>
+      <div className='feature__row'>
         <div className='col-1-of-4'>
           <div className='feature-box '>
             <i className='feature-box__icon fas fa-book-reader'></i>

@@ -7,26 +7,31 @@ const Popup = () => {
     <div className='popup' id='popup'>
       <div className=' popup__content'>
         <div className='popup__left'>
-          <img src={image} alt='' className='popup__img' />
+          <img src={image} alt='' className='popup__img  popup__img-1 ' />
 
           <img src={imag} alt='' className='popup__img' />
         </div>
         <div className='popup__right'>
-          <a href='#section-cours' className='popup__close'>&times;</a>
-          <h2 className='heading--secendary margin-bottom-small'>
-            start booking now
-          </h2>
-          <h3 className='heading-tertiary margin-bottom-small'>
-            Important &ndash; Please read these terms before booking
-          </h3>
-          <p className='popup__text'>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel soluta
-            praesentium quos eius et aliquam error voluptate facere accusamus
-            beatae hic nihil, sequi illum tempore velit iste in doloribus eos?
-          </p>
-          <a href='#' className='btn btn--blue '>
-            Book now
+          <a href='#section-cours' className='popup__close'>
+            &times;
           </a>
+          <div className='popup__phone'>
+            <h2 className='heading--secendary margin-bottom-small'>
+              start booking now
+            </h2>
+            <h3 className='heading-tertiary margin-bottom-small'>
+              Important &ndash; Please read these terms before booking
+            </h3>
+            <p className='popup__text'>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              soluta praesentium quos eius et aliquam error voluptate facere
+              accusamus beatae hic nihil, sequi illum tempore velit iste in
+              doloribus eos?
+            </p>
+            <a href='#' className='btn  btn--blue '>
+              acheter
+            </a>
+          </div>
         </div>
       </div>
     </div>

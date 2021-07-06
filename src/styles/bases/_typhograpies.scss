@@ -24,11 +24,10 @@
     display: block;
     font-size: 2rem;
     font-weight: 400;
-    letter-spacing: .8rem;
+    letter-spacing: 0.8rem;
     animation: moveInright 1s ease-out;
     @include respond(phone) {
-      letter-spacing: .5rem;
-     
+      letter-spacing: 0.5rem;
     }
   }
 }
@@ -48,13 +47,12 @@
   color: transparent; //the color of the text is transpaent to make us see the -webki-clip
   letter-spacing: 0.2rem;
   transition: all 0.2s;
-  
- 
-  @include respond(tab-port){
+
+  @include respond(tab-port) {
     font-size: 3rem;
     padding-top: 10rem;
   }
-  @include respond(phone){
+  @include respond(phone) {
     font-size: 2.5rem;
     padding-top: 10rem;
   }

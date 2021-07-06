@@ -1,4 +1,10 @@
+.feature__row {
+  display: flex;
+  justify-content: space-around;
+}
+
 .feature-box {
+  margin: 2rem;
   background-color: rgba($color-white, $alpha: 0.8);
   font-size: 1.5rem;
   padding: 2.5rem;

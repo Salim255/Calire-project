@@ -14,18 +14,13 @@
     box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 1);
     text-align: center; //to center the icons
     cursor: pointer;
-
-    @include respond(phone){
-      top:3rem;
-      right:3rem ;
-    }
   }
   &__background {
-    height: 4rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
     position: fixed;
-    top: 4.2rem;
-    right: 4.5rem;
+    top: 4rem;
+    right: 4rem;
     background-image: radial-gradient(
       #88c7dc,
       $color-black
@@ -34,7 +29,6 @@
     z-index: 1000;
     //transform: scaleY(20);
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
-    
   }
   &__nav {
     height: 100%;
@@ -51,7 +45,7 @@
   &__list {
     position: absolute;
     top: 37%;
-    left: 80%;
+    left: 85%;
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
@@ -144,5 +138,74 @@
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
     transform: rotate(-135deg);
+  }
+
+  //response
+
+  @include respond(tab-port) {
+    &__button {
+      top: 2rem;
+      right: 2rem;
+    }
+    &__background {
+      top: 2.3rem;
+      right: 2.4rem;
+    }
+
+    &__nav {
+      height: 95%;
+      //width: 100%;
+    }
+
+    &__list {
+      position: absolute;
+      top: 38%;
+      left: 78%;
+      width: 40%;
+    }
+    &__item {
+      margin: 0;
+    }
+    &__link {
+      &:link,
+      &:visited {
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+  @include respond(phone) {
+    &__button {
+      top: 2rem;
+      right: 2rem;
+    }
+    &__background {
+      top: 2.3rem;
+      right: 2.4rem;
+    }
+
+    &__nav {
+      height: 95%;
+      //width: 100%;
+    }
+
+    &__list {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 40%;
+    }
+    &__item {
+      margin: 0;
+    }
+    &__link {
+      &:link,
+      &:visited {
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+      }
+    }
   }
 }
