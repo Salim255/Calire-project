@@ -1,4 +1,19 @@
-.section-formation-migrants {
+.section-formation-coursfrancais {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-gray-dark, 0.9),
+      rgba($color-tertiary-dark-2, 0.9)
+    ),
+    url('../../assets/coursfrancais.jpg');
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  text-align: center;
+}
+.section-formation-migrant {
   background-image: linear-gradient(
       to right bottom,
       rgba($color-gray-dark, 0.9),
@@ -6,7 +21,22 @@
     ),
     url('../../assets/migrant5.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
+  width: 100%;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  text-align: center;
+}
+.section-formation-fle {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-gray-dark, 0.9),
+      rgba($color-tertiary-dark-2, 0.9)
+    ),
+    url('../../assets/formateurmigrant.jpg');
+  background-size: cover;
+  background-position: top;
   width: 100%;
   height: 100vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -16,6 +46,6 @@
 
 .formation-descriptions {
   background-color: $color-gray-light;
-  padding: 25rem 0;
+  padding: 20rem 0;
   margin-top: -25vh;
 }

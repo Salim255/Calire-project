@@ -41,14 +41,13 @@
   100% {
     opacity: 1; //or transition
     transform: translateY(0);
-   
   }
 }
 
 @keyframes moveIcon {
   0% {
     opacity: 0;
-    transform: scale(-1.5);
+    transform: rotateY(360deg);
   }
   100% {
     opacity: 1;
@@ -57,7 +56,7 @@
 @keyframes moveupIcon {
   0% {
     opacity: 0;
-    transform: translateY(-.2rem) scale(1.2);
+    transform: translateY(-0.2rem) scale(1.2);
   }
   100% {
     opacity: 1;

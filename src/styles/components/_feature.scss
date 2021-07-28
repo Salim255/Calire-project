@@ -1,9 +1,10 @@
-.feature__row {
+.feature {
   display: flex;
   justify-content: space-around;
 }
 
 .feature-box {
+  flex-basis: 20%;
   margin: 2rem;
   background-color: rgba($color-white, $alpha: 0.8);
   font-size: 1.5rem;
@@ -37,4 +38,10 @@
   }
   &__text {
   }
+}
+
+.link {
+  text-decoration: none;
+  color: $color-gray-dark;
+  flex-basis: 25%;
 }

@@ -1,0 +1,263 @@
+.section-coursFransias {
+  //margin-bottom: 10rem;
+
+  background-color: $color-gray-light;
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-gray-dark, 0.9),
+  //     rgba($color-tertiary-dark-2, 0.9)
+  //   ),
+  //   url('../../assets/cours-1.jpg');
+  // background-size: cover;
+  // background-position: bottom;
+  // width: 100%;
+  // transform: skewY(-7deg);
+
+  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  position: relative;
+  text-align: center;
+  // & > * {
+  //   transform: skewY(7deg);
+  // }
+}
+.center-text-cours {
+  margin-top: 10rem;
+}
+
+.cours-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+
+  &__item {
+    margin-top: 10rem;
+    // height: 40rem;
+    flex-basis: 28%;
+
+    background-color: rgba(1, 16, 23, 0.703);
+    box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
+  }
+  &__picture {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &-1 {
+      background-image: url('../../assets/cours-2.jpg');
+      background-size: cover;
+      background-blend-mode: screen;
+      height: 20rem;
+      width: 100%;
+    }
+    &-2 {
+      background-image: url('../../assets/cours-3.jpg');
+      background-size: cover;
+      background-blend-mode: screen;
+      height: 20rem;
+      width: 100%;
+    }
+    &-3 {
+      background-image: url('../../assets/cours-4.jpg');
+      background-size: cover;
+      background-blend-mode: screen;
+      height: 20rem;
+      width: 100%;
+    }
+  }
+
+  &__heading-span {
+    box-decoration-break: clone;
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $color-gray-light-2;
+        padding: 0.9rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-dark;
+        }
+      }
+    }
+  }
+}
+
+.cours-span {
+  &-1 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(133, 133, 20), 0.5) 10%,
+      rgba(rgb(244, 123, 82), 0.9) 90%
+    );
+  }
+  &-2 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(222, 206, 27), 0.5) 10%,
+      rgba(rgb(6, 101, 106), 0.9) 90%
+    );
+  }
+  &-3 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(12, 32, 246), 0.5) 10%,
+      rgba(rgb(106, 6, 99), 0.9) 90%
+    );
+  }
+  &-4 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(215, 236, 61), 0.5) 10%,
+      rgba(rgb(10, 9, 0), 0.9) 90%
+    );
+  }
+}
+
+///////////////////////////////cours general section
+.section-cours-description {
+  background-color: $color-gray-light;
+  padding: 15rem 0;
+}
+.cours-description {
+  display: flex;
+  justify-content: center;
+
+  //border-bottom: $border-bottom;
+  & > * {
+    flex-basis: 70%;
+    background-color: white;
+    box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
+    padding: 6rem;
+  }
+  &__list {
+    list-style: none;
+    font-size: 1.3rem;
+    line-height: 2.5;
+  }
+  &__text {
+    max-width: 50%;
+    align-self: center;
+  }
+  &__evaluation {
+    margin-left: 5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+.deco {
+  height: 95vh; //95%
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-gray-dark, 0.5),
+    rgba($color-tertiary-dark-2, 0.5)
+  );
+
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  -webkit-clip-path: polygon(
+    0 0,
+    50% 0,
+    100% 75vh,
+    0 50%
+  ); //to make it work on all the browsers
+
+  clip-path: polygon(0 0, -5% 0, 60% 40vh, 30% 30%);
+  &__coursFransias {
+    top: 0;
+    left: 0rem;
+    right: 3rem;
+  }
+}
+.cours-details {
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.005) translateY(-0.5rem);
+  }
+  &__intensif {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(119, 38, 38), 0.9) 40%,
+      rgba(rgb(140, 92, 15), 0.5) 70%
+    );
+  }
+  &__extensif {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(227, 218, 45), 0.9) 40%,
+      rgba(rgb(140, 92, 15), 0.5) 70%
+    );
+  }
+  &__alacarte {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(2, 71, 13), 0.9) 40%,
+      rgba(rgb(140, 92, 15), 0.5) 70%
+    );
+  }
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 2px;
+  margin-bottom: 5rem;
+  padding-top: 2rem;
+  &__item {
+    flex-basis: 33%;
+    font-size: 2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: row;
+
+    color: wheat;
+    &-1 {
+      display: flex;
+      margin-left: auto;
+    }
+    &-2 {
+      display: flex;
+      margin-left: auto;
+    }
+    &-3 {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+  &__icon {
+    border-radius: 100px;
+    font-size: 4rem;
+    font-weight: 100;
+    fill: rgba($color-tertiary-dark-2, 0.4);
+  }
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.btn-contact {
+  margin-left: 40%;
+  margin-top: 10rem;
+}

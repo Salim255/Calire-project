@@ -1,0 +1,169 @@
+.module {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 52rem;
+  position: relative;
+
+  &__side {
+    height: 52rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 1);
+
+    &--front {
+      background-color: rgb(255, 255, 255);
+    }
+    &--back {
+      transform: rotateY(-180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(39, 32, 13), 1) 40%,
+          rgba(rgb(61, 109, 186), 1) 70%
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(119, 38, 38), 1) 40%,
+          rgba(rgb(140, 92, 15), 1) 70%
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(5, 19, 16), 0.8) 40%,
+          rgba(rgb(206, 219, 26), 1) 70%
+        );
+      }
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(7, 2, 25), 1) 40%,
+          rgba(rgb(231, 150, 37), 1) 70%
+        );
+      }
+      &-fle-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(214, 217, 204),
+          rgb(212, 136, 14)
+        );
+      }
+      &-fle-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(53, 139, 208),
+          rgb(9, 60, 65)
+        );
+      }
+      &-fle-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(198, 78, 19),
+          rgb(97, 107, 143)
+        );
+      }
+      &-fle-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(83, 81, 87),
+          rgb(23, 174, 149)
+        );
+      }
+      &-cours-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(133, 133, 20), 0.5) 10%,
+          rgba(rgb(244, 123, 82), 0.9) 90%
+        );
+      }
+      &-cours-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(222, 206, 27), 0.5) 10%,
+          rgba(rgb(6, 101, 106), 0.9) 90%
+        );
+      }
+      &-cours-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(12, 32, 246), 0.5) 10%,
+          rgba(rgb(106, 6, 99), 0.9) 90%
+        );
+      }
+      &-cours-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(rgb(215, 236, 61), 0.5) 10%,
+          rgba(rgb(10, 9, 0), 0.9) 90%
+        );
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__details {
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    &--list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+
+      &--item {
+        flex: 0 0 80%;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-dark;
+        }
+
+        &--link:link,
+        &--link:visited {
+          text-decoration: none;
+          color: $color-gray-light;
+        }
+      }
+    }
+  }
+  //front side styling
+
+  //back side stling
+
+  &__side &__cta {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+  }
+  &__price--box {
+    color: white;
+    margin-bottom: 2rem;
+  }
+  &__price--only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  &__price--value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}

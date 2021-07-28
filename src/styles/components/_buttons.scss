@@ -29,7 +29,9 @@
     opacity: 0; //to make it fade up, so we dont see when it go back
   }
 }
-
+.btn-cours {
+  margin-bottom: 3rem;
+}
 .btn--white {
   background-color: $color-white;
   color: #777;
@@ -51,7 +53,6 @@
 
 .btn--blue {
   background-image: linear-gradient(
-    
     $color-tertiary-dark-1,
     $color-tertiary-dark-2
   );

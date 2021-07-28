@@ -1,26 +1,129 @@
 .review {
-  background-color: white;
-  box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
-
-  padding: 3rem;
-  margin: -25rem 4rem 0 4rem;
-  text-align: center;
   position: relative;
-  z-index: 10;
 
   &__modules {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10rem;
-    margin-top: 10rem;
-    border-bottom: 1px solid $color-gray-light-2;
-
     & > * {
-      flex: 1 1 0;
+    }
+  }
+  &__header {
+  }
+  &__picture {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    &-1 {
+      background-image: url('../../assets/fmigrant-1.jpg');
+    }
+    &-2 {
+      background-image: url('../../assets/fmigrant-2.jpg');
+    }
+    &-3 {
+      background-image: url('../../assets/fmigrant-3.jpg');
+    }
+    &-4 {
+      background-image: url('../../assets/fmigrant-4.jpg');
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: right;
+    color: white;
+  }
+  &__heading-span {
+    box-decoration-break: clone;
+    &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(rgb(39, 32, 13), 0.5) 40%,
+        rgba(rgb(61, 109, 186), 0.9) 70%
+      );
+    }
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(rgb(119, 38, 38), 0.5) 40%,
+        rgba(rgb(140, 92, 15), 0.9) 70%
+      );
+    }
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(rgb(8, 94, 76), 0.5) 30%,
+        rgba(rgb(206, 219, 26), 0.9) 70%
+      );
+    }
+    &-4 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(rgb(7, 2, 25), 0.5) 40%,
+        rgba(rgb(231, 150, 37), 0.9) 70%
+      );
+    }
+  }
+
+  &__text {
+    margin: 5rem;
+    width: 100%;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.5);
+    &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255)
+      );
+      // background-color: rgb(102, 55, 47);
+    }
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(249, 249, 249),
+        rgb(255, 255, 255)
+      );
+      background-color: rgb(78, 80, 76);
+    }
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(255, 255, 255),
+        rgb(249, 250, 253)
+      );
+      // background-color: rgb(32, 112, 104);
+    }
+    &-4 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255)
+      );
+    }
+    &-display {
+      display: inline-block;
+
+      width: 100%;
+    }
+  }
+  &__price {
+    display: flex;
+    // column-count: 2;
+    // column-gap: 4rem;
+    // column-rule: 1px solid $color-gray-light-2;
+    // hyphens: auto;
+    font-size: 1.3rem;
+
+    &-item {
+      margin: 3rem;
       flex-basis: 50%;
     }
   }
 }
+
+////////////////////////////text header
 
 ////////////////////////////////////////////////////
 ///LIST
@@ -35,7 +138,7 @@
 
   &__item {
     margin-bottom: 0.7rem;
-    flex: 0 0 51%;
+    flex: 0 0 80%;
     position: relative;
     cursor: pointer;
   }
@@ -45,15 +148,10 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 0.05px;
-    background-image: linear-gradient(
-      to right bottom,
-      $color-gray-dark,
-      $color-tertiary-dark-1
-    );
-
+    width: 0.0005px;
+    background-image: linear-gradient(to right bottom, tomato, blue);
     transform: scaleY(1);
-    transition: all 0.25s;
+    transition: transform 0.25s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
   }
 
   &__item:hover::before {
@@ -62,15 +160,45 @@
 
   &__link:link,
   &__link:visited {
-    color: $color-gray-dark;
+    //color: white;
+    //text-transform: uppercase;
     text-decoration: none;
     text-transform: uppercase;
     display: block;
-    padding: 1rem 1rem;
+    padding: 0.3rem 0.3rem;
     position: relative;
     z-index: 10;
   }
   &__link:link {
-    color: white;
   }
+}
+
+.date {
+}
+.datetable {
+  margin-top: 2rem;
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+    align-items: center;
+    &-item {
+      flex-basis: 40%;
+    }
+  }
+}
+
+.review-heading {
+  text-align: center;
+}
+
+.pargaraph__left {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.paragraph__right {
+  margin-left: 8rem;
+  color: white;
 }

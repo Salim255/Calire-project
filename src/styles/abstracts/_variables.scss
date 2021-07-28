@@ -13,6 +13,7 @@ $color-tertiary-dark-2: #152238;
 $color-gray-light: #f7f7f7;
 $color-gray-light-2: #eee;
 $color-gray-dark: #777;
+$color-gray-dark-2: #999;
 
 $color-white: #fff;
 $color-black: #000;
@@ -27,3 +28,7 @@ $grid-width: 114rem;
 $qutter-vertical: 8rem;
 $qutter-vertical-small: 6rem;
 $qutter-horizontal: 6rem;
+
+
+////////////border
+$border-bottom: 1px solid $color-gray-light-2;

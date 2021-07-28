@@ -1,0 +1,99 @@
+.aboutme {
+  background-color: $color-tertiary-dark-2;
+  padding: 15rem 5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-tertiary-dark-2,
+    rgb(0, 17, 17)
+  );
+  //height: 120vh;
+  &__text {
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: -5rem;
+  }
+}
+
+.about {
+  background-color: rgba($color-white, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  transform: skew(12deg);
+  font-size: 1.6rem;
+  & > * {
+    transform: skewX(-12deg);
+  }
+  height: 80vh;
+  &__shape {
+    width: 35rem;
+    height: 35rem;
+    float: left;
+    -webkit-shape-outside: polygon(
+      30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%
+    );
+    shape-outside: polygon(
+      30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%
+    ); //in order to apply this the lement most have float and have the dementions(width and height), thats why we have float here
+    //shape-outside: polygon(50%);
+    //-webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%
+    );
+
+    transform: translateX(-4rem) skewX(-12deg); //tohave some padding
+    position: relative;
+  }
+  &__img {
+    height: 100%; //100% of the parent
+    width: 100%;
+    transform: translateY(1.5rem) translateX(-1.2rem) scale(1.2); //to center the image
+    transition: all 0.3s;
+  }
+  &__text {
+    transform: skewX(-12deg);
+    padding-top: 5rem;
+    font-size: 1.8rem;
+  }
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    // backface-visibility: hidden;
+  }
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  &:hover &__img {
+    transform: translate(-0.2rem);
+    filter: blur(3px) brightness(80%);
+  }
+}

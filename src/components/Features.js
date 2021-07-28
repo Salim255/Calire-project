@@ -1,12 +1,13 @@
 import React from 'react'
 import 'font-awesome/css/font-awesome.min.css'
+import { Link } from 'react-router-dom'
 
 const Features = () => {
   return (
     <section className='section-features'>
-      <div className='feature__row'>
-        <div className='col-1-of-4'>
-          <div className='feature-box '>
+      <div className='feature'>
+        <div className='feature-box'>
+          <Link to='/ffle' className='link'>
             <i className='feature-box__icon fas fa-book-reader'></i>
             <h3 className='heading-tertiary margin-bottom-small '>
               formateurs fle
@@ -15,10 +16,11 @@ const Features = () => {
               Se former à la didactique de l'oral et de l'écrit, la pédagogie du
               projet et aux approches cognitives à l'international.
             </p>
-          </div>
+          </Link>
         </div>
-        <div className='col-1-of-4'>
-          <div className='feature-box '>
+
+        <div className='feature-box'>
+          <Link to='/fmigrant' className='link'>
             <i className='feature-box__icon fas fa-book-reader'></i>
             <h3 className='heading-tertiary margin-bottom-small '>
               formateurs migrants
@@ -27,10 +29,11 @@ const Features = () => {
               Se former aux spécifités des publics, aux approches
               interculturelles et au passage de l'oral à l'écrit.
             </p>
-          </div>
+          </Link>
         </div>
-        <div className='col-1-of-4'>
-          <div className='feature-box '>
+
+        <div className='feature-box'>
+          <Link to='/ffle' className='link'>
             <i className='feature-box__icon fas fa-cogs'></i>
 
             <h3 className='heading-tertiary margin-bottom-small '>
@@ -40,10 +43,11 @@ const Features = () => {
               Activités ludiques, conception de supports sonores et
               audiovisiuels et d'excercices multiniveaux pour publics exilés.
             </p>
-          </div>
+          </Link>
         </div>
-        <div className='col-1-of-4'>
-          <div className='feature-box '>
+
+        <div className='feature-box'>
+          <Link to='/course-de-francais' className='link'>
             <i className='feature-box__icon fas fa-book'></i>
 
             <h3 className='heading-tertiary margin-bottom-small '>
@@ -53,7 +57,7 @@ const Features = () => {
               Se préparer au DELF, se former au français général, sur objectifs
               spécifiques, et au français langue professionnelle.
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
