@@ -18,6 +18,7 @@ import PreperationDelf from './components/PreperationDelf'
 import ObjectifSp from './components/ObjectifSp'
 import Professionnelle from './components/Professionnelle'
 import Aboutus from './components/Aboutus'
+import Error from './components/Error'
 import Pedagogique from './components/Pedagogique'
 import Contacteznous from './components/Contacteznous'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -81,9 +82,9 @@ function App() {
            
           </Route>
           <Route path='/contactez-nous'>
-            < Contacteznous/>
-            
+            < Contacteznous/>  
           </Route>
+         
         </Switch>
       </Router>
     </div>
