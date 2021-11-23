@@ -3,8 +3,9 @@
   padding: 15rem 5rem;
   background-image: linear-gradient(
     to right bottom,
-    $color-tertiary-dark-2,
-    rgb(189, 127, 76)
+    rgb(200, 214, 219),
+    rgb(163, 155, 150)
+    
   );
  
 }
@@ -24,7 +25,7 @@
   &__sub {
     display: block;
     margin-bottom: 5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
   }
 }
@@ -48,17 +49,21 @@
     display: flex;
     justify-content: center;
     margin-top: 5rem;
+    & a,
+    & a:visited{
+        text-decoration: none;
+        color: unset;
+    }
   }
   &-icon {
     padding: 0.5rem;
     border-radius: 5px;
     margin-top: 2rem;
-    // background-color: red;
+    
     display: inline-block;
 
     &__icon {
       font-size: 5rem;
-   
       transition: all .2s;
     }
   }
@@ -120,5 +125,59 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
+  }
+}
+
+
+.sbmit{
+  border: unset;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block; //we wil always do this to have some pading or width ...
+  border-radius: 10rem;
+  
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%; //of the btn original size
+    width: 100%;
+    position: absolute; //we will use absolut posinot to put it behinde the actuel button
+    //but the obsolute need always a refernce, so we use a reletive position in parent button
+    top: 0;
+    left: 0;
+    z-index: -1; //z-index define the postion of the elements if the one on top of the an other, with this we put the opsudo elemnt behinde the actuel buttons..
+
+    //this is the inital state so lets use the animations..
+    transition: all 0.4s;
+  }
+  &:hover::after {
+    //when do I wnat to see the ::after effect?  its when we hover
+    transform: scaleX(1.5) scaleY(1.4);
+    opacity: 0; //to make it fade up, so we dont see when it go back
+  }
+}
+
+.btn--blue-sbmit {
+  background-image: linear-gradient(
+    $color-tertiary-dark-1,
+    $color-tertiary-dark-2
+  
+  );
+  color: white;
+  position: relative;
+
+  &::after {
+    //when do I wnat to see the ::after effect?  its when we hover
+    background-color: $color-gray-dark;
+    border-radius: 10rem;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-gray-dark, $alpha: 0.8);
+  }
+  &:active {
+    transform: translateY(
+      -0.01rem
+    ); //in relation to the intial state(before hover)
   }
 }

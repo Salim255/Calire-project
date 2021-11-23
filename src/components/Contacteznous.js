@@ -2,22 +2,35 @@ import React from 'react'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineFacebook } from 'react-icons/ai'
 import { AiOutlineLinkedin } from 'react-icons/ai'
+import emailjs from 'emailjs-com';
 const Contacteznous = () => {
+
+  const sendEmail = (e)=>{
+      e.preventDefault();
+
+      emailjs.sendForm('service_44vxprg', 'template_rxzvevd', e.target, 'user_JMz5nEy6w6TbRdakdEIFr').then(res =>{
+        console.log(res)
+      }).catch(err => console.log(err));
+  }
+
   return (
     <>
       <section className='section-contactez-nous'>
         <div className='contact-header'>
-          <h1 className='contact-header__main'>contactez nous</h1>
-          <h2 className='contact-header__sub'>
+        <div class='aboutme__text u-center-text u-margin-bottom-big'>
+          <h2 class='heading--secendary'>contactez nous</h2>
+        </div>
+         
+          <h3 className='contact-header__sub'>
             Voulez vous s'inscrire pour une session ou acheter un module ?
-          </h2>
+          </h3>
         </div>
         <div className='contact'>
-          <form action='#' className='form'>
+          <form action='#' className='form' onSubmit={sendEmail}>
             <div className='form__group'>
               <input
                 type='text'
-                id='nom'
+                id='nom' name='nom'
                 placeholder='Nom'
                 className='form__input'
                 required
@@ -40,8 +53,9 @@ const Contacteznous = () => {
             </div>
             <div className='form__group'>
               <input
-                type='text'
+                type='number'
                 id='telephone'
+                name='tele'
                 placeholder='Numéro de téléphone'
                 className='form__input'
                 required
@@ -54,6 +68,7 @@ const Contacteznous = () => {
               <input
                 type='email'
                 id='email'
+                name='email'
                 placeholder='Addresse mail'
                 className='form__input'
                 required
@@ -66,6 +81,7 @@ const Contacteznous = () => {
               <textarea
                 type='message'
                 id='message'
+                name='message'
                 placeholder='Votre message'
                 className='form__textarea form__input'
                 rows='8'
@@ -75,22 +91,25 @@ const Contacteznous = () => {
               </label>
             </div>
             <div className='form__group'>
-              <a href='#' className='btn btn--blue'>
+              <button type='submit' className=' sbmit btn--blue-sbmit'>
+                  envoyer &rarr;
+              </button>
+              {/* <a href='submit' className='btn btn--blue'>
                 envoyer &rarr;
-              </a>
+              </a> */}
             </div>
           </form>
         </div>
         <section className='contact__icon'>
-          <div className='contact-icon'>
+          <a className='contact-icon'>
             <AiOutlineInstagram className='contact-icon__icon contact-icon__icon-1' />
-          </div>
-          <div className='contact-icon'>
+          </a>
+          <a className='contact-icon'>
             <AiOutlineFacebook className='contact-icon__icon contact-icon__icon-2' />
-          </div>
-          <div className='contact-icon'>
+          </a>
+          <a href='https://www.linkedin.com/in/claire-del-olmo-682235213/' className='contact-icon'>
             <AiOutlineLinkedin className='contact-icon__icon contact-icon__icon-3' />
-          </div>
+          </a>
         </section>
       </section>
     </>

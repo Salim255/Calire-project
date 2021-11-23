@@ -34,7 +34,7 @@ const Extensif = () => {
           </div>
         </div>
         <div className='center-text margin-bottom-big'>
-          <h2 className='heading--secendary'>Programme intensif</h2>
+          <h2 className='heading--secendary'>Programme Extensif</h2>
           <h3>15 heures / semaine</h3>
         </div>
         <div className='cours-description'>

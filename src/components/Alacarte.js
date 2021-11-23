@@ -34,7 +34,7 @@ const Alacarte = () => {
           </div>
         </div>
         <div className='center-text margin-bottom-big'>
-          <h2 className='heading--secendary'>Programme intensif</h2>
+          <h2 className='heading--secendary'>Programme A la Carte</h2>
           <h3>A partir de 12 heures / semaine</h3>
         </div>
         <div className='cours-description'>
@@ -124,7 +124,7 @@ const Alacarte = () => {
               </li>
             </ul>
             <Link
-              to='description-alacarte'
+              to='/contactez-nous'
               className='btn btn--blue btn-animated btn-contact'
             >
               contactez nous

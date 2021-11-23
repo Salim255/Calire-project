@@ -118,7 +118,7 @@ const Intensif = () => {
               </li>
             </ul>
             <Link
-              to='description-intensif'
+              to='/contactez-nous'
               className='btn btn--blue btn-animated btn-contact'
             >
               contactez nous

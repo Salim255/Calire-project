@@ -10,7 +10,7 @@ const About = () => {
       </div>
 
       <div className='row'>
-        <div className='about'>
+        <div className='aboutt'>
           <h3 className='heading-tertiary margin-bottom-small'>apprenants</h3>
           <p>
             Pour ceux qui veulent apprendre le français, développer leurs

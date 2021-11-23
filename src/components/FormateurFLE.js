@@ -209,7 +209,7 @@ const FormateurFLE = () => {
                     <p className='module__price--value'>$898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <a href='/contactez-nous' className='btn btn--white'>
                     s'inscrire
                   </a>
                 </div>
@@ -271,7 +271,7 @@ const FormateurFLE = () => {
                     <p className='module__price--value'>$898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <a href='/contactez-nous'  className='btn btn--white'>
                     s'inscrire
                   </a>
                 </div>
@@ -335,7 +335,7 @@ const FormateurFLE = () => {
                     <p className='module__price--value'>$898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <a href='/contactez-nous'  className='btn btn--white'>
                     s'inscrire
                   </a>
                 </div>
@@ -399,7 +399,7 @@ const FormateurFLE = () => {
                     <p className='module__price--value'>$898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <a href='/contactez-nous'  className='btn btn--white'>
                     s'inscrire
                   </a>
                 </div>

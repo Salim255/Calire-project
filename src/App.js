@@ -35,47 +35,47 @@ function App() {
             <Features />
             <Cours />
             <Popup />
-            <Footer />
+          
           </Route>
           <Route path='/fmigrant'>
             <Formationmigrant />
-            <Footer />
+          
           </Route>
           <Route path='/ffle'>
             <FormateurFLE />
-            <Footer />
+            
           </Route>
           <Route path='/course-de-francais'>
             <CourseFrancaise />
-            <Footer />
+           
           </Route>
           <Route path='/francais'>
             <CoursdefrancaisGeneral />
-            <Footer />
+           
           </Route>
           <Route path='/description-intensif'>
             <Intensif />
-            <Footer />
+           
           </Route>
           <Route path='/description-extensif'>
             <Extensif />
-            <Footer />
+           
           </Route>
           <Route path='/description-alacarte'>
             <Alacarte />
-            <Footer />
+           
           </Route>
           <Route path='/preperation-delf-dalf'>
             <PreperationDelf />
-            <Footer />
+            
           </Route>
           <Route path='/objectif-specifique'>
             <ObjectifSp />
-            <Footer />
+           
           </Route>
           <Route path='/francais-professionnelle'>
             <Professionnelle />
-            <Footer />
+            
           </Route>
           <Route path='/aboutus'>
             <Aboutus />
@@ -86,6 +86,7 @@ function App() {
           </Route>
          
         </Switch>
+        <Footer />
       </Router>
     </div>
   )

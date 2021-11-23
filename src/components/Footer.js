@@ -9,26 +9,26 @@ const Footer = () => {
           <div className='footer__navigation'>
             <ul className='footer__list'>
               <li className='footer__item'>
-                <a href='#' className='footer__link'>
+                <a href='/aboutus' className='footer__link'>
                   qui sommes-nous?
                 </a>
               </li>
               <li className='footer__item'>
-                <a href='#' className='footer__link'>
-                  contacte
+                <a href='/contactez-nous' className='footer__link'>
+                  contact
                 </a>
               </li>
               <li className='footer__item'>
-                <a href='#' className='footer__link'>
+                <a href='/' className='footer__link'>
                   
                   Accueil
                 </a>
               </li>
-              <li className='footer__item'>
+             {/*  <li className='footer__item'>
                 <a href='#' className='footer__link'>
                   privacy
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

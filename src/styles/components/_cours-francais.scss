@@ -36,7 +36,7 @@
     // height: 40rem;
     flex-basis: 28%;
 
-    background-color: rgba(1, 16, 23, 0.703);
+    background-color: rgba(144, 150, 153, 0.938);
     box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
     border-radius: 2px;
     position: relative;
@@ -196,21 +196,21 @@
   &__intensif {
     background-image: linear-gradient(
       to right bottom,
-      rgba(rgb(119, 38, 38), 0.9) 40%,
-      rgba(rgb(140, 92, 15), 0.5) 70%
+      rgba(rgb(12, 87, 90), 0.9) 40%,
+      rgba(rgb(13, 167, 209), 0.5) 70%
     );
   }
   &__extensif {
     background-image: linear-gradient(
       to right bottom,
-      rgba(rgb(227, 218, 45), 0.9) 40%,
-      rgba(rgb(140, 92, 15), 0.5) 70%
+      rgba(rgb(226, 132, 69), 0.9) 40%,
+      rgba(rgb(138, 113, 74), 0.5) 70%
     );
   }
   &__alacarte {
     background-image: linear-gradient(
       to right bottom,
-      rgba(rgb(2, 71, 13), 0.9) 40%,
+      rgba(rgb(91, 112, 151), 0.9) 40%,
       rgba(rgb(140, 92, 15), 0.5) 70%
     );
   }
