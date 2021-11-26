@@ -4,13 +4,14 @@
   background-image: linear-gradient(
     to right bottom,
     rgb(200, 214, 219),
-    rgb(163, 155, 150)
+    rgb(221, 227, 230)
     
   );
  
 }
 
 .contact-header {
+  
   text-align: center;
   &__main {
     display: inline-block;
@@ -20,7 +21,7 @@
     color: white;
     font-weight: 700;
     letter-spacing: 2.5px;
-    border-bottom: 3px solid $color-gray-dark;
+    
   }
   &__sub {
     display: block;
@@ -31,6 +32,7 @@
 }
 
 .contact {
+  
   width: 80%;
   margin: 0 auto;
   padding: 5rem;
@@ -180,4 +182,33 @@
       -0.01rem
     ); //in relation to the intial state(before hover)
   }
+}
+
+//response
+@include respond(tab-port) {
+ .contact{
+  width: 100%;
+ }
+ .form{
+  width: 100%;
+  padding: 0rem;
+ }
+   
+}
+@include respond(phone) {
+  .contact-header {
+    margin-top: -8rem;
+    &__main {
+      font-size: 2rem;
+      font-weight: 700;
+      
+    }
+    &__sub {
+      display: block;
+      margin-bottom: 5rem;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+  
 }

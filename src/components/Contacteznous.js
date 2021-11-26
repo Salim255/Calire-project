@@ -17,13 +17,13 @@ const Contacteznous = () => {
     <>
       <section className='section-contactez-nous'>
         <div className='contact-header'>
-        <div class='aboutme__text u-center-text u-margin-bottom-big'>
-          <h2 class='heading--secendary'>contactez nous</h2>
-        </div>
-         
-          <h3 className='contact-header__sub'>
-            Voulez vous s'inscrire pour une session ou acheter un module ?
-          </h3>
+            <div class='aboutme__text u-center-text u-margin-bottom-big contact-header__main'>
+              <h2 class='heading--secendary'>contactez nous</h2>
+            </div>
+            
+              <h3 className='contact-header__sub'>
+                Voulez vous s'inscrire pour une session ou acheter un module ?
+              </h3>
         </div>
         <div className='contact'>
           <form action='#' className='form' onSubmit={sendEmail}>

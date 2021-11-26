@@ -1,79 +1,97 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect, useRef} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
 import * as GrIcons from "react-icons/gr"
 import { SideBarData } from './Sidbar';
 import { IconContext } from 'react-icons';
+import {links, social} from './data';
+
+const useWindowsWidth = ()=>{
+  const [wnWidth, setWnWidth] = useState([window.innerWidth]);
+
+  useEffect(() => {
+    const handleResize = () =>{
+      setWnWidth([window.innerWidth]);
+    }
+    window.addEventListener("resize", handleResize);
+    return ()=>{
+      window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+  console.log(wnWidth);
+  return wnWidth;
+}
 
 const Navigation = () => {
-  const [sideBar, setSideBar] = useState(false);
-  const showSideBar = () => setSideBar(!sideBar);
-  
+  const [showSideBar, setSideBar] = useState(false);
+  const [width] = useWindowsWidth();
+  const linkContainerRef = useRef(null);//for DIV
+  const linksRef = useRef(null);//for UL
+
+  /* useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+   if(showSideBar){
+     linkContainerRef.current.style.height = `100vh`
+   }else{
+     linkContainerRef.current.style.height = '0px';
+   }
+   
+  }, [ showSideBar ]) */
   return (
     <>
-     <IconContext.Provider value={{ color:'#ad5090' }}>
+     <IconContext.Provider value={{ color:'rgb(110, 206, 230)' }}>
      <div className="navbar">
-      <NavLink to="/" className="menu-bars" >
-          {/*  <FaIcons.FaBars onClick={showSideBar}/> */}
-          {/* <GrIcons.GrHome className="home"/> */}
+      <NavLink to="/" className="icon" >
+        {/*    <FaIcons.FaBars /> */}
+          {/*  <GrIcons.GrHome className="home"/>  */}
           <FaIcons.FaHome className="home" activeClassName="main-nav-active"/>
       </NavLink>
-            
             <ul className="navbar-menu">
-                <li className="navbar-menu__item">
-                  <NavLink to="/ffle"  activeClassName="main-nav-active">formateurs fle</NavLink>
-                </li>
-                <li className="navbar-menu__item">
-                  <NavLink to="/fmigrant" activeClassName="main-nav-active">formateurs migrants</NavLink>
-                </li>
-                <li className="navbar-menu__item">
-                  <NavLink to="/course-de-francais" activeClassName="main-nav-active">cours de francais</NavLink>
-                </li>
-                <li className="navbar-menu__item">
-                  <NavLink to="/creation-pedagogique" activeClassName="main-nav-active">creation pedagogique</NavLink>
-                </li>
-                <li className="navbar-menu__item ">
-                  <NavLink to="/contactez-nous" activeClassName="main-nav-active">Contactez nous</NavLink>
-                </li>
-                <li className="navbar-menu__item ">
-                  <NavLink to="/aboutus" activeClassName="main-nav-active">qui sommes nous</NavLink>
-                </li>
-                
+                {links.map((link) =>{
+                  const {id, url, text} = link;
+                  return <li className={link.cName} key={id}>
+                    <NavLink to={url} activeClassName="main-nav-active">{text}</NavLink>
+                  </li>
+                })}
             </ul>
-
             <div className="navbar-menu__item login ">
                   <NavLink to="#" >login</NavLink>
             </div>
-    
-     
-      
     </div>
 
-    <nav className={sideBar ? 'nav-menu active' : 'nav-menu'}>
-      <ul className="nav-menu-items" onClick={showSideBar}>
-        <li className="navbar-toggle">
-         <Link to="#" className='menu-bars'>
-             <AiIcons.AiOutlineClose/>
-          </Link>
-        </li>
-            {SideBarData.map((item,index) =>
-              {
-                return(
-                    <li key={index} className={item.cName}>
-                      <Link to="#">{item.title}</Link>
-                    </li>
-                          )
-              }
-              )
-            }
-      </ul>
+    <section className="sidebar-section">
+        <div className="sidebar-section__header ">
+        <NavLink to="/" className="icon sidebar-section__header-contact"  onClick={()=>setSideBar(!showSideBar)}>
+            <FaIcons.FaBars /> 
+          </NavLink>
+          <div className="contactez">
+          <NavLink to="/contactez-nous" >contactez nous</NavLink>
+          </div>
+         
+        </div>
+        <nav className={`${showSideBar ? 'show-container nav-menu' : 'nav-menu' } `} onClick={()=>setSideBar(!showSideBar)}
+        >
+          <ul className="nav-menu-items" >
+            <li >
+                <AiIcons.AiOutlineClose className='icon icon-close'/>
+            </li>
+            <li className='nav-menu__text'>
+                    <a href='/'>accueil</a>
+            </li>
+            {links.map((link) =>{
+                  const {id, url, text} = link;
+                  return <li className={link.cNameSide} key={id}>
+                    <a href={url}>{text}</a>
+                  </li>
+                })}
+          </ul>
+        </nav>  
 
-    </nav> 
-
+    </section>
      </IconContext.Provider>
    
-
+ 
 
 
   </>
