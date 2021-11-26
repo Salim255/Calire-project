@@ -145,6 +145,7 @@ a {
     list-style: none;
     height: 8rem;
     text-transform: capitalize;
+    margin-top: 2rem;
     & a {
      text-decoration: none;
      color: $color-gray-dark;
@@ -155,11 +156,15 @@ a {
      display: flex;
      align-items: center;
      padding: 0 16px;
-     border-radius:  4px;
+     border-radius:  0.4rem;
+     height: 6rem;
+     border: 2px ;
+     
    }
    & a:hover {
      background-color: rgb(110, 206, 230);
      /* border-bottom: 3px solid #ad5090; */
+     padding:2rem 0 2rem 0 ;
      transform:  scale(1.02);
      color: rgb(251, 253, 253);
      padding-left: 1.5rem;
@@ -231,6 +236,7 @@ a {
 }
 @include respond(phone) {
   .nav-menu{
+    width: 60%;
     &__text{
       display: flex;
       justify-content: start;
@@ -238,10 +244,12 @@ a {
       padding: 8px 0 8px 16px;
       list-style: none;
       height: 5rem;
+  
       & a {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 300;
-        width: 100%;
+        width: 90%;
+        
       }
      
      }
