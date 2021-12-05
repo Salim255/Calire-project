@@ -26,10 +26,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
   return (
     <div className='App'>
-      <Router>
+      <Router basename="/">
         <Navigation />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/' >
             <Header />
             <About />
             <Features />
@@ -37,54 +37,60 @@ function App() {
             <Popup />
           
           </Route>
-          <Route path='/fmigrant'>
+          <Route path='/fmigrant' exact >
             <Formationmigrant />
           
           </Route>
-          <Route path='/ffle'>
+          <Route path='/ffle' exact >
             <FormateurFLE />
             
           </Route>
-          <Route path='/course-de-francais'>
+          <Route path='/course-de-francais' exact >
             <CourseFrancaise />
            
           </Route>
-          <Route path='/francais'>
+          <Route path='/francais' exact >
             <CoursdefrancaisGeneral />
            
           </Route>
-          <Route path='/description-intensif'>
+          <Route path='/description-intensif' exact >
             <Intensif />
            
           </Route>
-          <Route path='/description-extensif'>
+          <Route path='/description-extensif' exact >
             <Extensif />
            
           </Route>
-          <Route path='/description-alacarte'>
+          <Route path='/description-alacarte' exact >
             <Alacarte />
            
           </Route>
-          <Route path='/preperation-delf-dalf'>
+          <Route path='/preperation-delf-dalf' exact >
             <PreperationDelf />
             
           </Route>
-          <Route path='/objectif-specifique'>
+          <Route path='/objectif-specifique' exact >
             <ObjectifSp />
            
           </Route>
-          <Route path='/francais-professionnelle'>
+          <Route path='/francais-professionnelle' exact >
             <Professionnelle />
             
           </Route>
-          <Route path='/aboutus'>
+          <Route path='/aboutus' exact >
             <Aboutus />
            
           </Route>
-          <Route path='/contactez-nous'>
+          <Route path='/contactez-nous' exact >
             < Contacteznous/>  
           </Route>
-         
+          <Route path='/*'>
+            <Header />
+            <About />
+            <Features />
+            <Cours />
+            <Popup /> 
+          </Route>
         </Switch>
         <Footer />
       </Router>

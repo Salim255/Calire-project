@@ -77,12 +77,12 @@ const Navigation = () => {
                 <AiIcons.AiOutlineClose className='icon icon-close'/>
             </li>
             <li className='nav-menu__text'>
-                    <a href='/'>accueil</a>
+                    <Link to='/'>accueil</Link>
             </li>
             {links.map((link) =>{
                   const {id, url, text} = link;
                   return <li className={link.cNameSide} key={id}>
-                    <a href={url}>{text}</a>
+                    <Link to={url}>{text}</Link>
                   </li>
                 })}
           </ul>

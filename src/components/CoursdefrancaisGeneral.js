@@ -16,7 +16,7 @@ const CoursdefrancaisGeneral = () => {
           <div className='cours-content__item'>
             <div className='cours-content__picture cours-content__picture-1'></div>
             <h4 className='cours-content__heading'>
-              <span className='cours-content__heading-span cours-content__heading-span-1'>
+              <span className='cours-content__heading-span cours-content__heading-span-1 heading--secendary'>
                 Intensif
               </span>
             </h4>
@@ -37,7 +37,7 @@ const CoursdefrancaisGeneral = () => {
           <div className='cours-content__item'>
             <div className='cours-content__picture cours-content__picture-2'></div>
             <h4 className='cours-content__heading'>
-              <span className='cours-content__heading-span cours-content__heading-span-2'>
+              <span className='cours-content__heading-span cours-content__heading-span-2 heading--secendary'>
                 Extensif
               </span>
             </h4>
@@ -59,7 +59,7 @@ const CoursdefrancaisGeneral = () => {
           <div className='cours-content__item'>
             <div className='cours-content__picture cours-content__picture-3'></div>
             <h4 className='cours-content__heading'>
-              <span className='cours-content__heading-span cours-content__heading-span-3'>
+              <span className='cours-content__heading-span cours-content__heading-span-3 heading--secendary'>
                 A la carte
               </span>
             </h4>

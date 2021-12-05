@@ -84,7 +84,7 @@
     ul {
       margin: 0 auto;
       li {
-        font-size: 1.5rem;
+        font-size: $default-font-size;
         padding: 1rem;
 
         &:not(:last-child) {
@@ -161,7 +161,7 @@
     // column-gap: 4rem;
     // column-rule: 1px solid $color-gray-light-2;
     // hyphens: auto;
-    font-size: 1.3rem;
+    font-size: $default-font-size;
 
     &-item {
       margin: 3rem;
@@ -178,7 +178,7 @@
 .list {
   list-style: none;
   margin: 3rem 0;
-  font-size: 1.4rem;
+  font-size: $default-font-size;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -224,7 +224,7 @@
 
 .date {
   //color: white;
-  font-size: 1.5rem;
+  font-size: $default-font-size;
   box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.5);
   background-image: linear-gradient(
     to right bottom,
@@ -238,7 +238,7 @@
   color: white;
   background-image: linear-gradient(
     65deg,
-    rgba(#705467, 0.8) 50%,
+    rgba($color-primary-light, 0.8) 50%,
     transparent 50%
   );
 
@@ -260,9 +260,47 @@
 .pargaraph__left {
   text-transform: uppercase;
   letter-spacing: 1px;
+  
 }
 
 .paragraph__right {
   margin-left: 8rem;
   color: gray;
 }
+
+@include respond(phone){
+  .datetable {
+    margin-top: 1rem;
+    //height: 30rem;
+    color: white;
+    background-image: linear-gradient(
+      160deg,
+      rgba(#7cc8db, 0.8) 34%,
+      transparent 20%
+    );
+    
+    &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: center;
+      margin-top: 10rem;
+      &-item {
+        flex-basis: 60%;
+      }
+    }
+  }
+  .pargaraph__left {
+    color:white;
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+   
+  }
+  .paragraph__right {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+

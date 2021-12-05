@@ -38,7 +38,7 @@ const Intensif = () => {
           <h3>21 heures / semaine</h3>
         </div>
         <div className='cours-description '>
-          <div>
+          
             <h3 className='heading-tertiary margin-bottom-small'>
               Présentation du programme
             </h3>
@@ -117,13 +117,8 @@ const Intensif = () => {
                 </ol>
               </li>
             </ul>
-            <Link
-              to='/contactez-nous'
-              className='btn btn--blue btn-animated btn-contact'
-            >
-              contactez nous
-            </Link>
-          </div>
+         
+          
         </div>
       </section>
     </div>

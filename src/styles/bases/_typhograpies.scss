@@ -1,5 +1,5 @@
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden; //to hide that shakeing animation no desired
   margin-bottom: 4rem;
@@ -39,7 +39,7 @@
   background-image: linear-gradient(
     to right bottom,
     $color-gray-dark,
-    $color-tertiary-dark-1
+    $color-primary
   );
   display: inline-block;
   -webkit-background-clip: text; //to showthe color exactly where the txt is
@@ -59,7 +59,7 @@
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba($color: #000000, $alpha: 1.2);
+    text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 1.2);
   }
 }
 body {
@@ -97,13 +97,10 @@ body {
 .review {
   // background-color: white;
   // box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
-
   padding: 5rem;
   margin: -10rem 4rem 0 4rem;
-
   position: relative;
   z-index: 10;
-
   &__bottom-border {
     border-bottom: 1px solid $color-gray-light-2;
     margin-top: -5rem;
@@ -113,16 +110,30 @@ body {
     display: flex;
     justify-content: space-around;
     align-content: space-around;
-
     flex-wrap: wrap;
     margin-top: 10rem;
     margin-bottom: 10rem;
-
+  /*   @media only screen and (max-width: 56.25rem), only screen and (hover: none) {
+      
+        background-color: rgb(80, 70, 177);
+        width: 100%;
+      
+    } */
     & > * {
       flex: 1 1 1;
-      flex-basis: 40%;
+      flex-basis: 35%;
       margin-bottom: 5rem;
+      margin-top: 5rem;
+       //@include respond(tab-port) {
+     /* @media only screen and (max-width: 56.25rem), only screen and (hover: none) {
+      flex-basis: 100%;
+      
+     }  */
+
+     
+  
     }
+   
   }
   &__header {
     text-align: center;
@@ -139,7 +150,6 @@ body {
     border-radius: 2px;
     overflow: hidden;
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.5);
-
     &-display {
       display: inline-block;
       width: 100%;
@@ -166,8 +176,6 @@ body {
     padding: 1rem 1.5rem;
     letter-spacing: 2px;
 
-    
-   
    
   }
 
@@ -189,3 +197,49 @@ body {
     }
   }
 }
+
+
+
+
+ @media only screen and (max-width: 56.25rem), only screen and (hover: none) {
+      
+  .review{
+
+
+    &__modules{
+      & > *{
+        flex-basis: 40%; 
+      }
+    }
+
+   
+  }
+ } 
+
+ @media only screen and (max-width: 37.5rem) {
+      
+  .review{
+    padding: 0.5rem;
+    margin: 0rem 0rem 0 0rem;
+    width: 100%;
+    &__modules{
+      & > *{
+        
+        flex-basis: 100%; 
+      }
+    }
+    &__header {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      flex-basis: 100%;
+      margin-bottom: 5rem;
+      margin-top: -5rem;
+      
+    }
+    &__price{
+       flex-direction: column;
+    }
+  }
+ } 

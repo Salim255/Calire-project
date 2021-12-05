@@ -2,13 +2,13 @@ import React from 'react'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineFacebook } from 'react-icons/ai'
 import { AiOutlineLinkedin } from 'react-icons/ai'
-import Image from '../assets/claire.jpg'
+import Image from '../assets/claire.jpeg'
 const Aboutus = () => {
   return (
     <>
       <section className='aboutme'>
-        <div class='aboutme__text u-center-text u-margin-bottom-big'>
-          <h2 class='heading--secendary'>qui sommes nous ?</h2>
+        <div className='aboutme__text u-center-text u-margin-bottom-big'>
+          <h2 className='heading--secendary'>qui sommes nous ?</h2>
         </div>
         <div className='aboutme__content'>
           <div className='about'>

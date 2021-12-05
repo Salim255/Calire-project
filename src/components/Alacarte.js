@@ -123,12 +123,6 @@ const Alacarte = () => {
                 </ol>
               </li>
             </ul>
-            <Link
-              to='/contactez-nous'
-              className='btn btn--blue btn-animated btn-contact'
-            >
-              contactez nous
-            </Link>
           </div>
         </div>
       </section>

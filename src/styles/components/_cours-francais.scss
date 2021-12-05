@@ -23,6 +23,10 @@
 }
 .center-text-cours {
   margin-top: 10rem;
+  @include respond(phone){
+    margin-top: 5rem;
+    margin-bottom: -5rem;
+  }
 }
 
 .cours-content {
@@ -30,13 +34,18 @@
   justify-content: space-around;
   margin-bottom: 10rem;
   margin-top: 10rem;
+  color: #f1eaea;
+  color: #000000;
+  @include respond(phone){
+    flex-direction: column;
+  }
 
   &__item {
     margin-top: 10rem;
     // height: 40rem;
     flex-basis: 28%;
 
-    background-color: rgba(144, 150, 153, 0.938);
+    background-color: rgba(243, 246, 248, 0.938);
     box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
     border-radius: 2px;
     position: relative;
@@ -74,24 +83,35 @@
 
   &__heading-span {
     box-decoration-break: clone;
+    font-size: 1.5rem;
+    margin-top: -5rem;
+    &-1{
+     
+    }
+    &-2{
+  
+    }
+    &-3{
+      
+    }
   }
 
   &__details {
     padding: 3rem;
-
+    
     ul {
       list-style: none;
       width: 80%;
       margin: auto;
-
+     
       li {
         text-align: center;
-        font-size: 1.5rem;
-        color: $color-gray-light-2;
+        font-size: $default-font-size;
+        color: $color-gray-dark;
         padding: 0.9rem;
 
         &:not(:last-child) {
-          border-bottom: 1px solid $color-gray-dark;
+          border-bottom:0.2px solid $color-gray-light-2;
         }
       }
     }
@@ -138,21 +158,38 @@
   display: flex;
   justify-content: center;
 
+  @include respond(phone){
+    margin-top: 10rem;
+    padding-top: 5rem;
+  }
   //border-bottom: $border-bottom;
+ 
   & > * {
     flex-basis: 70%;
     background-color: white;
     box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
     padding: 6rem;
+    @include respond(phone){
+      flex-basis: 98%;
+      padding: 2rem;
+    }
   }
   &__list {
     list-style: none;
     font-size: 1.3rem;
     line-height: 2.5;
+    padding-bottom: 5rem;
+    @include respond(phone){
+      font-size: 1.2rem;
+      line-height: 3;
+      
+      
+    }
   }
   &__text {
     max-width: 50%;
     align-self: center;
+    
   }
   &__evaluation {
     margin-left: 5rem;
@@ -196,22 +233,22 @@
   &__intensif {
     background-image: linear-gradient(
       to right bottom,
-      rgba(rgb(12, 87, 90), 0.9) 40%,
-      rgba(rgb(13, 167, 209), 0.5) 70%
+      rgba(rgb(120, 209, 212), 0.9) 20%,
+      rgba(rgb(216, 184, 147), 0.5) 70%
     );
   }
   &__extensif {
     background-image: linear-gradient(
       to right bottom,
-      rgba(rgb(226, 132, 69), 0.9) 40%,
-      rgba(rgb(138, 113, 74), 0.5) 70%
+      rgba(rgb(120, 209, 212), 0.9) 20%,
+      rgba(rgb(216, 184, 147), 0.5) 70%
     );
   }
   &__alacarte {
     background-image: linear-gradient(
       to right bottom,
-      rgba(rgb(91, 112, 151), 0.9) 40%,
-      rgba(rgb(140, 92, 15), 0.5) 70%
+      rgba(rgb(120, 209, 212), 0.9) 20%,
+      rgba(rgb(216, 184, 147), 0.5) 70%
     );
   }
 
@@ -227,10 +264,8 @@
     font-weight: 400;
     display: flex;
     justify-content: center;
-
     flex-direction: row;
-
-    color: wheat;
+    color:white;
     &-1 {
       display: flex;
       margin-left: auto;
@@ -246,18 +281,26 @@
   }
   &__icon {
     border-radius: 100px;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 100;
-    fill: rgba($color-tertiary-dark-2, 0.4);
+    
+    @include respond(phone){
+      border-radius: 100px;
+      font-size: 1.5rem;
+      font-weight: 100;
+      padding: 0;
+    }
   }
 }
 
 .icon-text {
   display: flex;
   align-items: center;
+ 
 }
 
 .btn-contact {
   margin-left: 40%;
   margin-top: 10rem;
 }
+

@@ -117,12 +117,6 @@ const Extensif = () => {
                 </ol>
               </li>
             </ul>
-            <Link
-              to='description-extensif'
-              className='btn btn--blue btn-animated btn-contact'
-            >
-              contactez nous
-            </Link>
           </div>
         </div>
       </section>

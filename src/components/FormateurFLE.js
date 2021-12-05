@@ -406,7 +406,6 @@ const FormateurFLE = () => {
               </div>
             </div>
           </section>
-
           <div className='review__bottom-border'></div>
 
           <section className='review__price'>
@@ -434,6 +433,7 @@ const FormateurFLE = () => {
               </p>
             </div>
           </section>
+
           <section className='date'>
             <div className='datetable'>
               <div className='datetable__box'>
