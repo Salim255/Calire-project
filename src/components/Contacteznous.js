@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineFacebook } from 'react-icons/ai'
 import { AiOutlineLinkedin } from 'react-icons/ai'
@@ -7,11 +7,37 @@ const Contacteznous = () => {
 
   const sendEmail = (e)=>{
       e.preventDefault();
-
-      emailjs.sendForm('service_44vxprg', 'template_rxzvevd', e.target, 'user_JMz5nEy6w6TbRdakdEIFr').then(res =>{
-        console.log(res)
+      emailjs.sendForm('service_44vxprg', 'template_rxzvevd', e.target, 'user_JMz5nEy6w6TbRdakdEIFr').then(res =>{ console.log(e.target)
       }).catch(err => console.log(err));
   }
+/*   const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [telNumber, setTelNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');  */
+  const [client, setClient] = useState({firstName:'', lastName:'', telNumber:'', email:'', message:''}); 
+
+/*   const handleSubmit = (e) =>{
+    e.preventDefault();
+      
+       client.firstName = '';
+       client.lastName = '';
+       client.telNumber = '';
+       client.email = '';
+       client.message = '';
+  } */
+
+  const handleChange = (e) =>{
+    const name = e.target.name;
+    const value = e.target.value;
+    setClient({...client,[name]: value})
+ }
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    sendEmail(e);
+    setClient({firstName:'', lastName: '', telNumber: '', email: '', message: ''});
+  }
+ 
 
   return (
     <>
@@ -26,41 +52,49 @@ const Contacteznous = () => {
               </h3>
         </div>
         <div className='contact'>
-          <form action='#' className='form' onSubmit={sendEmail}>
+          <form action='#' className='form' on  onSubmit={handleSubmit} >
             <div className='form__group'>
               <input
                 type='text'
-                id='nom' name='nom'
+                id='lastName' 
+                name='lastName'
+                value={client.lastName}
                 placeholder='Nom'
                 className='form__input'
                 required
+                onChange={handleChange}
               />
-              <label for='nom' className='form__label'>
+              <label htmlFor='lastName' className='form__label'>
                 Nom
               </label>
             </div>
             <div className='form__group'>
               <input
                 type='text'
-                id='prenom'
+                id='firstName'
                 placeholder='Prénom'
+                name="firstName"
                 className='form__input'
+                value={client.firstName}
+                onChange={handleChange}
                 required
               />
-              <label for='prenom' className='form__label'>
+              <label htmlFor='firstName' className='form__label'>
                 Prénom
               </label>
             </div>
             <div className='form__group'>
               <input
                 type='number'
-                id='telephone'
-                name='tele'
+                id='telNumber'
+                name='telNumber'
+                value={client.telNumber}
                 placeholder='Numéro de téléphone'
                 className='form__input'
+                onChange={handleChange}
                 required
               />
-              <label for='telephone' className='form__label'>
+              <label htmlFor='telNumber' className='form__label'>
                 Numéro de téléphone
               </label>
             </div>
@@ -69,11 +103,13 @@ const Contacteznous = () => {
                 type='email'
                 id='email'
                 name='email'
+                value={client.email}
                 placeholder='Addresse mail'
                 className='form__input'
+                onChange={handleChange}
                 required
               />
-              <label for='email' className='form__label'>
+              <label htmlFor='email' className='form__label'>
                 Addresse mail
               </label>
             </div>
@@ -82,16 +118,18 @@ const Contacteznous = () => {
                 type='message'
                 id='message'
                 name='message'
+                value={client.message}
                 placeholder='Votre message'
                 className='form__textarea form__input'
                 rows='8'
+                onChange={handleChange}
               />
-              <label for='message' className='form__label'>
+              <label htmlFor='message' className='form__label'>
                 Votre message
               </label>
             </div>
             <div className='form__group'>
-              <button type='submit' className=' sbmit btn--blue-sbmit'>
+              <button type='submit' className=' sbmit btn--blue-sbmit' /* onClick={handleSubmit} */>
                   envoyer &rarr;
               </button>
               {/* <a href='submit' className='btn btn--blue'>

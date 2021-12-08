@@ -4,13 +4,17 @@
   background-image: linear-gradient(
     to right bottom,
     rgb(233, 240, 243),
-    rgb(221, 227, 230)
+    rgb(236, 239, 240)
   );
+
   //height: 120vh;#
   &__text {
     text-align: center;
     margin-bottom: 5rem;
     margin-top: -5rem;
+  }
+  @include respond(phone){
+    padding: 15rem 1rem 5rem 1rem;
   }
 }
 
@@ -21,7 +25,9 @@
   transform: skew(5deg);
   font-size: 1.6rem;
   font-weight: 300;
-  
+  @include respond(phone){
+    text-align: center;
+  }
   & > * {
     transform: skewX(-12deg);
     
@@ -200,11 +206,12 @@
   }
     
  }
- @include respond(phone) {
+ @include respond(tab-port) {
   .about {
     background-color: rgba($color-white, 0.5);
+  
     border-radius: 3px;
-    padding: 6rem;
+    padding: 5rem 2rem 5rem 2rem;
     transform: skew(0deg);
     font-size: 2rem;
     & > * {
@@ -213,12 +220,13 @@
     height: 80%;
    
     &__shape {
+    
       width: 25rem;
       height: 25rem;
       position: relative;
-      top: 30%;
-      left: 37%;
-      transform: translate(-38%, -20%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-52%, -20%);
      /*  transform: translateX(-8.5rem) skewX(0deg); //tohave some padding */ 
       float: left;
       -webkit-shape-outside: polygon(
@@ -285,6 +293,15 @@
       opacity: 0;
       transition: all 0.5s;
       // backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+      opacity: 0;
+      
+    }
+    &:hover &__img {
+      transform: translate(0);
+      filter: unset;
     }
    
   }

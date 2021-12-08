@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://claire.webs-designner.com/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -45,5 +46,6 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "node-sass": "^6.0.1"
-  }
+  } 
+  
 }

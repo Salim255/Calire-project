@@ -42,7 +42,6 @@ const Extensif = () => {
             <h3 className='heading-tertiary margin-bottom-small'>
               Présentation du programme
             </h3>
-
             <ul className='cours-description__list'>
               <li className='cours-description__item'>
                 <div className='icon-text'>

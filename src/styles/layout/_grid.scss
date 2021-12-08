@@ -16,6 +16,10 @@
   @include respond(tab-port) {
     max-width: 50rem;
   }
+  @include respond(phone) {
+    width: 94%;
+  }
+
   @include clearfix;
   [class^='col-'] {
     float: left;

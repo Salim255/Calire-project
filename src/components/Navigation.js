@@ -6,6 +6,7 @@ import * as GrIcons from "react-icons/gr"
 import { SideBarData } from './Sidbar';
 import { IconContext } from 'react-icons';
 import {links, social} from './data';
+import { FaLinkedin } from 'react-icons/fa'
 
 const useWindowsWidth = ()=>{
   const [wnWidth, setWnWidth] = useState([window.innerWidth]);
@@ -19,7 +20,7 @@ const useWindowsWidth = ()=>{
       window.removeEventListener("resize", handleResize);
     }
   }, []);
-  console.log(wnWidth);
+  
   return wnWidth;
 }
 
@@ -45,7 +46,7 @@ const Navigation = () => {
       <NavLink to="/" className="icon" >
         {/*    <FaIcons.FaBars /> */}
           {/*  <GrIcons.GrHome className="home"/>  */}
-          <FaIcons.FaHome className="home" activeClassName="main-nav-active"/>
+          <FaIcons.FaHome className="home" />
       </NavLink>
             <ul className="navbar-menu">
                 {links.map((link) =>{
@@ -56,20 +57,21 @@ const Navigation = () => {
                 })}
             </ul>
             <div className="navbar-menu__item login ">
-                  <NavLink to="#" >login</NavLink>
+                  <a href='https://www.linkedin.com/in/claire-del-olmo-682235213/'><FaLinkedin className="linked" /></a>
             </div>
     </div>
 
     <section className="sidebar-section">
         <div className="sidebar-section__header ">
-        <NavLink to="/" className="icon sidebar-section__header-contact"  onClick={()=>setSideBar(!showSideBar)}>
+        <div className="icon sidebar-section__header-contact"  onClick={()=>setSideBar(!showSideBar)}>
             <FaIcons.FaBars /> 
-          </NavLink>
+          </div>
           <div className="contactez">
-          <NavLink to="/contactez-nous" >contactez nous</NavLink>
+          <Link to="/contactez-nous"> contactez nous </Link>
           </div>
          
         </div>
+       
         <nav className={`${showSideBar ? 'show-container nav-menu' : 'nav-menu' } `} onClick={()=>setSideBar(!showSideBar)}
         >
           <ul className="nav-menu-items" >

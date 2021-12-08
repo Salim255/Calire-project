@@ -14,7 +14,7 @@ const Header = () => {
             formations pour formateurs-création pédagogique-cours de français
           </span>
         </h1>
-        <a href='#' className='btn btn--white btn-animated'>
+        <a href='#feature' className='btn btn--white btn-animated'>
           découvrir plus
         </a>
       </div>

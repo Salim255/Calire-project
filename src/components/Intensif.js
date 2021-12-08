@@ -39,10 +39,11 @@ const Intensif = () => {
         </div>
         <div className='cours-description '>
           
+            
+            <div>
             <h3 className='heading-tertiary margin-bottom-small'>
               Présentation du programme
             </h3>
-
             <ul className='cours-description__list'>
               <li className='cours-description__item'>
                 <div className='icon-text'>
@@ -117,6 +118,8 @@ const Intensif = () => {
                 </ol>
               </li>
             </ul>
+            </div>
+
          
           
         </div>

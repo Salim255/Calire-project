@@ -73,7 +73,7 @@ a {
 
  .login{
   display: flex;
-  
+  color: white;
  }
 
  .main-nav-active{
@@ -90,6 +90,7 @@ a {
  /////////////////SIDEBAR SECTION
 
 .sidebar-section{
+  
    &__header{
     background-image: linear-gradient(
       -60deg,
@@ -106,36 +107,44 @@ a {
         margin-right: auto;
       }
    }
+ 
+   
 }
 
  nav{
-  background-image: linear-gradient(
-    -60deg,
-    #705467, 50%,
-    transparent 50%,
-    transparent 90%
-  );
   display: flex;
   justify-content: start;
   transition:  all 0.5s linear;
+  height: 100vh;
+  width: 100%;
+
 
  }
 
  .nav-menu{
-  background-image: radial-gradient(
-    /* rgb(190, 212, 218),
-    rgb(8, 57, 70) */
-    rgb(244, 246, 247),
-    rgb(241, 244, 245)
-    );
-   width: 40%;
+   background-color: rgba($color: #000000, $alpha: 0.7);
    display: flex;
-   justify-content: center;
    position:fixed;
    top:0;
    left: -100%;
    z-index: 100;
    height: 100vh;
+   width: 100%;
+   
+    & ul{
+      background-image: radial-gradient(
+    /* rgb(190, 212, 218),
+    rgb(8, 57, 70) */
+    rgb(244, 246, 247),
+    rgb(241, 244, 245)
+    );
+      width: 50%;
+      height: 100vh;
+      
+     
+     
+    }
+   
    
    &__text{
     display: flex;
@@ -184,6 +193,7 @@ a {
 .show-container {
    left: 0;
   
+  
 }
 
 .contactez{
@@ -221,6 +231,7 @@ a {
     &__header{
       height: 0;
     }
+  
   }
  
   .nav-menu{
@@ -236,7 +247,9 @@ a {
 }
 @include respond(phone) {
   .nav-menu{
-    width: 60%;
+    & ul{
+      width: 70%;
+    }
     &__text{
       display: flex;
       justify-content: start;
@@ -254,4 +267,14 @@ a {
      
      }
   }
+
+
+}
+
+
+.linked{
+  background-color:$color-gray-dark;
+  font-size: 5rem;
+  border-radius: 4rem;
+  
 }

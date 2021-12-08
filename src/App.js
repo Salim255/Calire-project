@@ -21,75 +21,64 @@ import Aboutus from './components/Aboutus'
 import Error from './components/Error'
 import Pedagogique from './components/Pedagogique'
 import Contacteznous from './components/Contacteznous'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from './components/Home'
+import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
     <div className='App'>
-      <Router basename="/">
+      <Router basename={process.env.PUBLIC_URL}>
         <Navigation />
         <Switch>
           <Route exact path='/' >
-            <Header />
-            <About />
-            <Features />
-            <Cours />
-            <Popup />
-          
+           <Home/>
           </Route>
-          <Route path='/fmigrant' exact >
+          <Route path='/fmigrant' >
             <Formationmigrant />
           
           </Route>
-          <Route path='/ffle' exact >
+          <Route path='/ffle' >
             <FormateurFLE />
             
           </Route>
-          <Route path='/course-de-francais' exact >
+          <Route path='/course-de-francais' >
             <CourseFrancaise />
            
           </Route>
-          <Route path='/francais' exact >
+          <Route path='/francais'  >
             <CoursdefrancaisGeneral />
            
           </Route>
-          <Route path='/description-intensif' exact >
+          <Route path='/description-intensif' >
             <Intensif />
            
           </Route>
-          <Route path='/description-extensif' exact >
+          <Route path='/description-extensif' >
             <Extensif />
            
           </Route>
-          <Route path='/description-alacarte' exact >
+          <Route path='/description-alacarte'  >
             <Alacarte />
-           
           </Route>
-          <Route path='/preperation-delf-dalf' exact >
+          <Route path='/preperation-delf-dalf' >
             <PreperationDelf />
-            
           </Route>
-          <Route path='/objectif-specifique' exact >
+          <Route path='/objectif-specifique'  >
             <ObjectifSp />
-           
           </Route>
-          <Route path='/francais-professionnelle' exact >
+          <Route path='/francais-professionnelle'  >
             <Professionnelle />
             
           </Route>
-          <Route path='/aboutus' exact >
+          <Route path='/aboutus' >
             <Aboutus />
            
           </Route>
-          <Route path='/contactez-nous' exact >
+          <Route path='/contactez-nous'  >
             < Contacteznous/>  
           </Route>
-          <Route path='/*'>
-            <Header />
-            <About />
-            <Features />
-            <Cours />
-            <Popup /> 
+          <Route path='*'>
+            <Home/> 
           </Route>
         </Switch>
         <Footer />

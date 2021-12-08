@@ -98,7 +98,7 @@ body {
   // background-color: white;
   // box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 1);
   padding: 5rem;
-  margin: -10rem 4rem 0 4rem;
+  margin: -10rem 4rem 0rem 4rem;
   position: relative;
   z-index: 10;
   &__bottom-border {
@@ -201,14 +201,13 @@ body {
 
 
 
- @media only screen and (max-width: 56.25rem), only screen and (hover: none) {
-      
+ @media only screen and (max-width: 56.25rem), only screen and (hover: none) {  
   .review{
-
 
     &__modules{
       & > *{
-        flex-basis: 40%; 
+        flex-basis: 68%; 
+        text-align: center;
       }
     }
 
@@ -219,14 +218,18 @@ body {
  @media only screen and (max-width: 37.5rem) {
       
   .review{
-    padding: 0.5rem;
-    margin: 0rem 0rem 0 0rem;
-    width: 100%;
+    padding: 0rem 0rem 0rem 0rem;
+    margin: -10rem 2rem 0rem 2rem;
     &__modules{
+    
       & > *{
         
         flex-basis: 100%; 
       }
+    }
+    &__heading{
+      
+     
     }
     &__header {
       text-align: center;
@@ -236,6 +239,7 @@ body {
       flex-basis: 100%;
       margin-bottom: 5rem;
       margin-top: -5rem;
+ 
       
     }
     &__price{

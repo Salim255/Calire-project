@@ -39,8 +39,11 @@ const Alacarte = () => {
         </div>
         <div className='cours-description'>
           <div>
+     
+            <div>
             <h3 className='heading-tertiary margin-bottom-small'>
               Présentation du programme
+            
             </h3>
             <p className=' paragraph'>
               Ce programme vous permet d’apprendre l’essentiel du français en
@@ -48,7 +51,7 @@ const Alacarte = () => {
               s’adapte 100% à vos disponibilités puisque c’est vous qui
               choisissez quels jours vous souhaitez venir.
             </p>
-
+            </div>
             <ul className='cours-description__list'>
               <li className='cours-description__item'>
                 <div className='icon-text'>

@@ -34,10 +34,7 @@ const Footer = () => {
         </div>
         <div className='col-1-of-2'>
           <p className='footer__text'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
-            molestiae magni quis maiores vel! Laudantium distinctio delectus
-            dolore expedita autem quibusdam aliquid beatae, debitis doloribus
-            ipsum recusandae necessitatibus quod.
+          &copy; Copyright Salim HS. All rights reserved.
           </p>
         </div>
       </div>

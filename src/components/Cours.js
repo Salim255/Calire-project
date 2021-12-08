@@ -1,10 +1,11 @@
 import React from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import { Link } from 'react-router-dom'
 
 const Cours = () => {
   return (
     <section className='section-cours' id='section-cours'>
-      <div className='center-text margin-bottom-big'>
+      <div className='center-text margin-bottom-big margin-top-bot'>
         <h2 className='heading--secendary'>nos formations en ligne</h2>
       </div>
 
@@ -31,11 +32,11 @@ const Cours = () => {
                 <div className='card__cta'>
                   <div className='card__price-box'>
                     <p className='card__price-only'>seulement</p>
-                    <p className='card__price-value'>$297</p>
+                    <p className='card__price-value'>€297</p>
                   </div>
-                  <a href='#popup' className='btn btn--white'>
+                  <Link to='/contactez-nous' className='btn btn--white'>
                     acheter
-                  </a>
+                  </Link> 
                 </div>
               </div>
             </div>
@@ -61,11 +62,11 @@ const Cours = () => {
                 <div className='card__cta'>
                   <div className='card__price-box'>
                     <p className='card__price-only'>seulement</p>
-                    <p className='card__price-value'>$297</p>
+                    <p className='card__price-value'>€297</p>
                   </div>
-                  <a href='#popup' className='btn btn--white'>
+                  <Link to='/contactez-nous' className='btn btn--white'>
                     acheter
-                  </a>
+                  </Link> 
                 </div>
               </div>
             </div>
@@ -91,11 +92,14 @@ const Cours = () => {
                 <div className='card__cta'>
                   <div className='card__price-box'>
                     <p className='card__price-only'>seulement</p>
-                    <p className='card__price-value'>$297</p>
+                    <p className='card__price-value'>€297</p>
                   </div>
-                  <a href='#popup' className='btn btn--white'>
+                  <Link to='/contactez-nous' className='btn btn--white'>
                     acheter
-                  </a>
+                  </Link> 
+                 {/*  <a href='#popup' className='btn btn--white'>
+                    acheter
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -103,11 +107,11 @@ const Cours = () => {
         </div>
       </div>
 
-      <div className='center-text margin-bottom-big margin-top-big'>
+     {/*  <div className='center-text margin-bottom-big margin-top-big'>
         <a href='#' className='btn btn--blue'>
           decouvrir toutes nos formations
         </a>
-      </div>
+      </div> */}
     </section>
   )
 }

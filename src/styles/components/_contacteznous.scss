@@ -8,6 +8,9 @@
     
   );
  
+  @include respond(tab-port){
+    padding: 15rem 1rem 5rem 1rem;
+  }
 }
 
 .contact-header {
@@ -192,6 +195,9 @@
  .form{
   width: 100%;
   padding: 0rem;
+  &__input {
+    width: 100%;
+  }
  }
    
 }
@@ -209,6 +215,10 @@
       font-size: 2rem;
       font-weight: 400;
     }
+  }
+
+  .contact{
+    padding: 1rem ;
   }
   
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Formationmigrant = () => {
   return (
@@ -110,12 +111,12 @@ const Formationmigrant = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <Link to='/contactez-nous' className='btn btn--white'>
                     s'inscrire
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -172,12 +173,12 @@ const Formationmigrant = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <Link to='/contactez-nous' className='btn btn--white'>
                     s'inscrire
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -234,12 +235,12 @@ const Formationmigrant = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <Link to='/contactez-nous'className='btn btn--white'>
                     s'inscrire
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -296,12 +297,12 @@ const Formationmigrant = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
-                  <a href='#' className='btn btn--white'>
+                  <Link to='/contactez-nous' className='btn btn--white'>
                     s'inscrire
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Features = () => {
   return (
-    <section className='section-features'>
+    <section className='section-features' id="feature">
       <div className='feature'>
         <div className='feature-box'>
           <Link to='/ffle' className='link'>

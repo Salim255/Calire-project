@@ -255,6 +255,8 @@
 
 .review-heading {
   text-align: center;
+  padding: 10rem 3rem 10rem 3rem;
+ 
 }
 
 .pargaraph__left {
@@ -269,6 +271,10 @@
 }
 
 @include respond(phone){
+  .text__header{
+      
+      padding: 1rem 3rem;
+  }
   .datetable {
     margin-top: 1rem;
     //height: 30rem;

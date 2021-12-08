@@ -143,7 +143,7 @@ const CourseFrancaise = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
                   <Link to='/francais' className='btn btn--white'>
@@ -205,7 +205,7 @@ const CourseFrancaise = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
                   <Link to='/preperation-delf-dalf' className='btn btn--white'>
@@ -268,7 +268,7 @@ const CourseFrancaise = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
                   <Link to='/objectif-specifique' className='btn btn--white'>
@@ -332,7 +332,7 @@ const CourseFrancaise = () => {
                 <div className='module__cta'>
                   <div className='module__price--box'>
                     <p className='module__price--only'>seulement</p>
-                    <p className='module__price--value'>$898</p>
+                    <p className='module__price--value'>€898</p>
                   </div>
 
                   <Link
